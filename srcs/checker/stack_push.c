@@ -4,23 +4,23 @@ void	stack_push(t_stack **from, t_stack **to)
 {
 	t_stack	*temp;
 
-	if (!from)
-		exit(29);
-	if (!to)
-	{
-		to = malloc(sizeof(t_stack *));
-		temp = stack_last(*from);
-		if (temp->prev)
-			temp->prev->next = NULL;
-		temp->prev = NULL;
-		*to = temp;
-		if (*from == temp)
-			*from = NULL;
+	if (!(*from))
 		return ;
+	if (!*to)
+	{
+		*to = stack_last(*from);
+		(*to)->prev->next = NULL;
+		(*to)->prev = NULL;
+		(*to)->next = NULL;		//redundant
 	}
-	temp = stack_last(*to);
-	temp->next = stack_last(*from);
-	if (temp->next->prev)
-		temp->next->prev->next = NULL;
-	temp->next->prev = temp;
+	else
+	{
+		temp = stack_last(*from);
+		if (temp == *from)
+			*from = NULL;
+		else
+			temp->prev->next = NULL;
+		temp->prev = stack_last(*to);
+		temp->prev->next = temp;
+	}
 }

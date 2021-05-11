@@ -17,6 +17,7 @@ int	check_args(int argc, char **argv)
 				return (0);
 			j++;			
 		}
+		i++;
 	}
 	return (1);
 }

@@ -12,7 +12,7 @@ int	is_sorted(t_stack *a, t_stack *b)
 		if (!current->prev)
 			;
 		else if (current->item > current->prev->item)
-				break ;
+			return (0);
 		current = current->next;
 	}
 	return (1);

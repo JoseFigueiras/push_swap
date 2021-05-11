@@ -6,10 +6,11 @@ t_stack	*stack_rev_rotate(t_stack *stack)
 
 	if (stack_size(stack) <= 1)
 		return (stack);
-	temp = stack;
-	stack = stack->next;
-	stack->prev = NULL;
-	temp->next = NULL;
-	stack_last(stack)->next = temp;
+	temp = stack->next;
+	temp->prev = NULL;
+	stack->next = NULL;
+	stack->prev = stack_last(temp);
+	stack->prev->next = stack;
+	stack = temp;
 	return (stack);
 }

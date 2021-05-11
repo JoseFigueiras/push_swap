@@ -1,4 +1,4 @@
-#include "checker.c"
+#include "checker.h"
 
 static t_stack	*stack_new(int item);
 

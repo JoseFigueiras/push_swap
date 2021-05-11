@@ -21,6 +21,10 @@ PUSH_OBJS	=	$(CHECK_SRCS:.c=.o)
 
 all: $(CHECK_NAME) $(PUSH_NAME)
 
+checker: $(CHECK_NAME)
+
+push_swap: $(PUSH_NAME)
+
 $(CHECK_NAME): $(CHECK_OBJS)
 	gcc $(FLAGS) $(CHECK_OBJS) -o $(CHECK_NAME)
 

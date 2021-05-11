@@ -21,7 +21,7 @@ int		is_sorted(t_stack *a, t_stack *b);
 
 t_stack	*stack_init(int *items, size_t size);
 t_stack	*stack_swap(t_stack *stack);
-void	stack_push(t_stack **from, t_stack **to)
+void	stack_push(t_stack **from, t_stack **to);
 t_stack	*stack_rotate(t_stack *stack);
 t_stack	*stack_rev_rotate(t_stack *stack);
 t_stack *stack_first(t_stack *stack);
