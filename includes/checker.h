@@ -15,7 +15,7 @@ typedef struct		s_stack
 
 int		check_args(int argc, char **argv);
 t_stack	*get_stack_from_args(int argc, char **argv);
-void	print_stacks(t_stack *a, t_stack *b);	//TODO
+void	print_stacks(t_stack *a, t_stack *b);
 int		run_command(t_stack **a, t_stack **b, char *line);
 int		is_sorted(t_stack *a, t_stack *b);
 
