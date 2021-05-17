@@ -1,0 +1,5 @@
+*.o
+*.swp
+checker_linux
+checker
+push_swap

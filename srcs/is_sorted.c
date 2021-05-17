@@ -1,12 +1,10 @@
 #include "push_swap.h"
 
-int	is_sorted(t_stack *a, t_stack *b)
+int	is_sorted(t_stack *stack)
 {
 	t_stack	*current;
 
-	if (stack_size(b) != 0)
-		return (0);
-	current = a;
+	current = stack;
 	while (current)
 	{
 		if (!current->prev)

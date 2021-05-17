@@ -1,4 +1,4 @@
-#include "checker.h"
+#include "push_swap.h"
 
 t_stack	*get_stack_from_args(int argc, char **argv)
 {
@@ -12,7 +12,7 @@ t_stack	*get_stack_from_args(int argc, char **argv)
 	i = 0;
 	while (i < list_size)
 	{
-		list[i] = ft_atoi(argv[i + 1]);
+		list[i] = ft_atoi(argv[list_size - i]);
 		i++;
 	}
 	stack = stack_init(list, list_size);
