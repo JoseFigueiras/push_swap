@@ -3,8 +3,7 @@ NAME		=	push_swap
 FLAGS		=	-Wall -Wextra -Werror
 INCLUDES	=	./includes/
 
-SRCS		=	$(NAME).c								\
-				$(wildcard srcs/*.c)			\
+SRCS		=	$(wildcard srcs/*.c)			\
 				$(wildcard Libft/*.c)
 
 OBJS		=	$(SRCS:.c=.o)
@@ -13,7 +12,7 @@ OBJS		=	$(SRCS:.c=.o)
 	gcc $(FLAGS) $< -c -o $@ -I $(INCLUDES)
 
 all: $(OBJS)
-	gcc $(FLAGS) $(OBJS) -o $(NAME)
+	@gcc $(FLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	rm -f $(OBJS)

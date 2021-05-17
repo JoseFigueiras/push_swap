@@ -4,6 +4,8 @@ int	is_sorted(t_stack *stack)
 {
 	t_stack	*current;
 
+	if (!stack)
+		return (0);
 	current = stack;
 	while (current)
 	{

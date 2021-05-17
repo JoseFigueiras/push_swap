@@ -4,14 +4,17 @@ static int	is_smallest_at_top(t_stack *stack);
 
 t_stack	*smallest_to_top(t_stack *stack, int a_or_b)
 {
+	size_t	size;
+
+	size = stack_size(stack);
 	while (!is_smallest_at_top(stack))
 	{
-		if (get_small_num_pos(stack) < stack_size(stack) / 2)
-			stack_run(REV_ROTATE, a_or_b, stack);
+		if (get_small_num_pos(stack) <= size / 2)
+			stack = stack_run(REV_ROTATE, a_or_b, stack);
 		else
-			stack_run(ROTATE, a_or_b, stack);
+			stack = stack_run(ROTATE, a_or_b, stack);
 	}
-	return (stack_first(stack));
+	return (stack);
 }
 
 static int	is_smallest_at_top(t_stack *stack)

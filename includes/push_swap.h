@@ -27,7 +27,6 @@ void	print_stacks(t_stack *a, t_stack *b);
 int		run_command(t_stack **a, t_stack **b, char *line);
 int		is_sorted(t_stack *a);
 
-t_stack	*stack_init(int *items, size_t size);
 t_stack	*stack_swap(t_stack *stack);
 void	stack_push(t_stack **from, t_stack **to);
 t_stack	*stack_rotate(t_stack *stack);
@@ -43,12 +42,14 @@ size_t	get_big_num_pos(t_stack *stack);
 size_t	get_small_num_pos(t_stack *stack);
 t_stack	*smallest_to_top(t_stack *stack, int a_or_b);
 
+t_stack	*sort(t_stack *stack, int a_or_b);
+
 t_stack	*sort_2(t_stack *stack, int a_or_b);
 t_stack	*sort_3(t_stack *stack, int a_or_b);
 t_stack	*sort_5(t_stack *stack, int a_or_b);
 
-void	sort_top_100(t_stack *stack, int a_or_b);
-void	sort_top_500(t_stack *stack, int a_or_b);
-void	sort_generic(t_stack *stack, int a_or_b);
+t_stack	*generic_sort_5(t_stack *stack, int a_or_b);
+t_stack	*generic_sort_100(t_stack *stack, int a_or_b);
+t_stack	*generic_sort_200(t_stack *stack, int a_or_b);
 
 #endif
