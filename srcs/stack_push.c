@@ -11,7 +11,7 @@ void	stack_push(t_stack **from, t_stack **to)
 		*to = stack_last(*from);
 		(*to)->prev->next = NULL;
 		(*to)->prev = NULL;
-		(*to)->next = NULL;		//redundant
+		(*to)->next = NULL;
 	}
 	else
 	{

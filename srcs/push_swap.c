@@ -15,5 +15,7 @@ int	main(int argc, char **argv)
 	//print_stacks(stack, NULL);
 	//if (is_sorted(stack))
 	//	printf("[OK!]\n");
+	//TODO: remove print_stacks.c file
+	free(stack);
 	return (0);
 }

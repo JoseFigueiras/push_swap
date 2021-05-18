@@ -17,7 +17,7 @@ void	print_stacks(t_stack *a, t_stack *b)
 		count_back_b = stack_count_back(bcurrent);
 		if (count_back_a >= count_back_b && count_back_a > 0)
 		{
-			printf("%4d", acurrent->item);			
+			printf("%4d", acurrent->item);
 			acurrent = acurrent->prev;
 		}
 		else

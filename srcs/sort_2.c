@@ -2,7 +2,7 @@
 
 t_stack	*sort_2(t_stack *stack, int a_or_b)
 {
-	t_stack *first;
+	t_stack	*first;
 	t_stack	*last;
 
 	if (is_sorted(stack))

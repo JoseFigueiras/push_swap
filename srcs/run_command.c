@@ -1,5 +1,7 @@
 #include "push_swap.h"
 
+static int	poop(t_stack **a, t_stack **b, char *line);
+
 int	run_command(t_stack **a, t_stack **b, char *line)
 {
 	if (!ft_strcmp(line, "sa"))
@@ -15,7 +17,14 @@ int	run_command(t_stack **a, t_stack **b, char *line)
 		stack_push(b, a);
 	else if (!ft_strcmp(line, "pb"))
 		stack_push(a, b);
-	else if (!ft_strcmp(line, "ra"))
+	else
+		return (poop(a, b, line));
+	return (0);
+}
+
+static int	poop(t_stack **a, t_stack **b, char *line)
+{
+	if (!ft_strcmp(line, "ra"))
 		*a = stack_rotate(*a);
 	else if (!ft_strcmp(line, "rb"))
 		*b = stack_rotate(*b);

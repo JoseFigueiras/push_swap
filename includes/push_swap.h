@@ -46,10 +46,8 @@ t_stack	*sort(t_stack *stack, int a_or_b);
 
 t_stack	*sort_2(t_stack *stack, int a_or_b);
 t_stack	*sort_3(t_stack *stack, int a_or_b);
-t_stack	*sort_5(t_stack *stack, int a_or_b);
 
 t_stack	*generic_sort_5(t_stack *stack, int a_or_b);
 t_stack	*generic_sort_100(t_stack *stack, int a_or_b);
-t_stack	*generic_sort_200(t_stack *stack, int a_or_b);
 
 #endif

@@ -26,7 +26,7 @@ static t_stack	*stack_init(int *items, size_t size)
 {
 	size_t	i;
 	t_stack	*stack;
-	t_stack *current;
+	t_stack	*current;
 
 	stack = stack_new(items[0]);
 	current = stack;

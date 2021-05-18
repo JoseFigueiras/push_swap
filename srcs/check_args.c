@@ -15,7 +15,7 @@ int	check_args(int argc, char **argv)
 		{
 			if (!ft_isdigit(argv[i][j]))
 				return (0);
-			j++;			
+			j++;
 		}
 		i++;
 	}
