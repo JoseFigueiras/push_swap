@@ -17,23 +17,23 @@ void	print_stacks(t_stack *a, t_stack *b)
 		count_back_b = stack_count_back(bcurrent);
 		if (count_back_a >= count_back_b && count_back_a > 0)
 		{
-			ft_putnbr_fd(acurrent->item, 1);
+			printf("%4d", acurrent->item);			
 			acurrent = acurrent->prev;
 		}
 		else
-			ft_putchar_fd(' ', 1);
-		ft_putchar_fd(' ', 1);
+			printf("    ");
+		printf(" ");
 		if (count_back_b >= count_back_a && count_back_b > 0)
 		{
-			ft_putnbr_fd(bcurrent->item, 1);
+			printf("%4d", bcurrent->item);
 			bcurrent = bcurrent->prev;
 		}
 		else
-			ft_putchar_fd(' ', 1);
-		ft_putchar_fd('\n', 1);
+			printf("    ");
+		printf("\n");
 	}
-	ft_putstr_fd("- -\n", 1);
-	ft_putstr_fd("a b\n", 1);
+	printf("---- ----\n");
+	printf("   a    b\n");
 }
 
 static size_t	stack_count_back(t_stack *stack)
