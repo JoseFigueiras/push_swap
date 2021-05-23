@@ -26,5 +26,5 @@ t_stack	*stack_run(int command, int a_or_b, t_stack *stack)
 		if (a_or_b == STACK_B)
 			write(1, "rrb\n", 4);
 	}
-	return (stack_first(stack));
+	return (stack);
 }

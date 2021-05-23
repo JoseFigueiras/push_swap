@@ -2,9 +2,12 @@
 
 t_stack	*stack_last(t_stack *stack)
 {
+	t_stack	*current;
+
 	if (!stack)
 		return (NULL);
-	while (stack->next)
-		stack = stack->next;
-	return (stack);
+	current = stack;
+	while (current->next)
+		current = current->next;
+	return (current);
 }

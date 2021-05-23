@@ -8,7 +8,9 @@ t_stack	*stack_rotate(t_stack *stack)
 		return (stack);
 	temp = stack_last(stack);
 	temp->prev->next = NULL;
-	temp->prev = NULL;
+	temp->prev = stack->prev;
+	if (temp->prev)
+		temp->prev->next = temp;
 	temp->next = stack;
 	stack->prev = temp;
 	stack = temp;

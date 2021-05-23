@@ -4,10 +4,14 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 # include "libft.h"
 
 # define STACK_A 0
 # define STACK_B 1
+
+# define TOP 0
+# define BOT 1
 
 # define PUSH 0
 # define SWAP 1
@@ -26,6 +30,7 @@ t_stack	*get_stack_from_args(int argc, char **argv);
 void	print_stacks(t_stack *a, t_stack *b);
 int		run_command(t_stack **a, t_stack **b, char *line);
 int		is_sorted(t_stack *a);
+int		is_unsorted(t_stack *stack);
 
 t_stack	*stack_swap(t_stack *stack);
 void	stack_push(t_stack **from, t_stack **to);
@@ -41,13 +46,25 @@ void	stack_run_push(int from_a_or_b, t_stack **from, t_stack **to);
 size_t	get_big_num_pos(t_stack *stack);
 size_t	get_small_num_pos(t_stack *stack);
 t_stack	*smallest_to_top(t_stack *stack, int a_or_b);
+t_stack	*biggest_to_top(t_stack *stack, int a_or_b);
+t_stack	*get_num_to_top(int num, t_stack *stack, int a_or_b);
+size_t	distance_to_top(int num, t_stack *stack);
 
 t_stack	*sort(t_stack *stack, int a_or_b);
 
+t_stack	*test_sort(t_stack *stack, int a_or_b);
+t_stack	*cool_sort(t_stack *stack, int a_or_b);
+
 t_stack	*sort_2(t_stack *stack, int a_or_b);
 t_stack	*sort_3(t_stack *stack, int a_or_b);
+t_stack	*sort_5(t_stack *stack, int a_or_b);
 
-t_stack	*generic_sort_5(t_stack *stack, int a_or_b);
-t_stack	*generic_sort_100(t_stack *stack, int a_or_b);
+t_stack	*generic_sort(t_stack *stack, int a_or_b);
+
+t_stack	*unsort_2(t_stack *stack, int a_or_b);
+t_stack	*unsort_3(t_stack *stack, int a_or_b);
+t_stack	*unsort_5(t_stack *stack, int a_or_b);
+
+int		absolute(int num);
 
 #endif

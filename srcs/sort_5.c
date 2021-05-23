@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-t_stack	*generic_sort_5(t_stack *stack, int a_or_b)
+t_stack	*sort_5(t_stack *stack, int a_or_b)
 {
 	t_stack	*helper;
 
