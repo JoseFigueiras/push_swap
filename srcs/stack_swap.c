@@ -7,7 +7,6 @@ t_stack	*stack_swap(t_stack *stack)
 
 	if (stack_size(stack) <= 1)
 	{
-		printf("Stack too smol\n");
 		return (stack);
 	}
 	current = stack_last(stack);

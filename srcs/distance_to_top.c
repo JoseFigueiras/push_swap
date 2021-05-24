@@ -18,9 +18,9 @@ size_t	distance_to_top(int num, t_stack *stack)
 	}
 	size = (int)stack_size(stack);
 	if (size % 2 == 1 && pos > size / 2)
-		distance = (size_t)absolute((size / 2) - absolute((size / 2) - pos + 1));
+		distance = (size_t)absolute((size / 2) - absolute((size / 2) - pos
+					+ 1));
 	else
 		distance = (size_t)absolute((size / 2) - absolute((size / 2) - pos));
-	//printf("size: %d, pos: %d, distance: %d\n", size, pos, (int)distance);
 	return (distance);
 }

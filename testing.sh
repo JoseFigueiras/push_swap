@@ -1,5 +1,5 @@
 OS="linux"
-NUM=500
+NUM=100
 
 ARG=`ruby -e "puts (1..$NUM).to_a.shuffle.join(' ')"`;
 

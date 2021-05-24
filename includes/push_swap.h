@@ -53,18 +53,14 @@ int		get_directly_below(t_stack *stack, int num);
 
 t_stack	*sort(t_stack *stack, int a_or_b);
 
-t_stack	*generic_sort(t_stack *stack, int a_or_b);
-t_stack	*test_sort(t_stack *stack, int a_or_b);
-t_stack	*cool_sort(t_stack *stack, int a_or_b);
 t_stack	*baby_sort(t_stack *stack, int a_or_b, int partition_size);
+void	fill_arr_with_smallest(int *arr, t_stack *stack, int partition_size);
+int		get_smallest_not_in_arr(t_stack *stack, int *arr, int partition_size);
+int		from_arr_closest_to_top(t_stack *stack, int *arr, int partition_size);
 
 t_stack	*sort_2(t_stack *stack, int a_or_b);
 t_stack	*sort_3(t_stack *stack, int a_or_b);
 t_stack	*sort_5(t_stack *stack, int a_or_b);
-
-t_stack	*unsort_2(t_stack *stack, int a_or_b);
-t_stack	*unsort_3(t_stack *stack, int a_or_b);
-t_stack	*unsort_5(t_stack *stack, int a_or_b);
 
 int		absolute(int num);
 

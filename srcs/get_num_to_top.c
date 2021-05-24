@@ -1,5 +1,8 @@
 #include "push_swap.h"
 
+static t_stack	*poop(t_stack *stack, int a_or_b, size_t distance,
+					int top_or_bot);
+
 t_stack	*get_num_to_top(int num, t_stack *stack, int a_or_b)
 {
 	int		top_or_bot;
@@ -25,6 +28,13 @@ t_stack	*get_num_to_top(int num, t_stack *stack, int a_or_b)
 		top = top->prev;
 		bot = bot->next;
 	}
+	stack = poop(stack, a_or_b, distance, top_or_bot);
+	return (stack);
+}
+
+static t_stack	*poop(t_stack *stack, int a_or_b, size_t distance,
+						int top_or_bot)
+{
 	if (top_or_bot == TOP)
 		while (distance--)
 			stack = stack_run(ROTATE, a_or_b, stack);
