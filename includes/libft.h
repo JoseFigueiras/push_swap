@@ -90,5 +90,6 @@ int					ft_strcmp(char *s1, char *s2);
 int					ft_clamp(int min, int num, int max);
 float				ft_fclamp(float min, float num, float max);
 void				print_and_exit(char *text, int error);
+int					is_in(int num, int *arr, int arr_size);
 
 #endif

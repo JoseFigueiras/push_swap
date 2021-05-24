@@ -49,17 +49,18 @@ t_stack	*smallest_to_top(t_stack *stack, int a_or_b);
 t_stack	*biggest_to_top(t_stack *stack, int a_or_b);
 t_stack	*get_num_to_top(int num, t_stack *stack, int a_or_b);
 size_t	distance_to_top(int num, t_stack *stack);
+int		get_directly_below(t_stack *stack, int num);
 
 t_stack	*sort(t_stack *stack, int a_or_b);
 
+t_stack	*generic_sort(t_stack *stack, int a_or_b);
 t_stack	*test_sort(t_stack *stack, int a_or_b);
 t_stack	*cool_sort(t_stack *stack, int a_or_b);
+t_stack	*baby_sort(t_stack *stack, int a_or_b, int partition_size);
 
 t_stack	*sort_2(t_stack *stack, int a_or_b);
 t_stack	*sort_3(t_stack *stack, int a_or_b);
 t_stack	*sort_5(t_stack *stack, int a_or_b);
-
-t_stack	*generic_sort(t_stack *stack, int a_or_b);
 
 t_stack	*unsort_2(t_stack *stack, int a_or_b);
 t_stack	*unsort_3(t_stack *stack, int a_or_b);

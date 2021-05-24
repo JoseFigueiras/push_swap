@@ -2,13 +2,22 @@
 
 t_stack	*sort(t_stack *stack, int a_or_b)
 {
-	size_t	size;
+	int	size;
+	int	partition_size;
 
-	size = stack_size(stack);
+	size = (int)stack_size(stack);
 	if (!stack || !size)
 		return (NULL);
 	if (is_sorted(stack))
 		return (stack);
-	stack = cool_sort(stack, a_or_b);
+	if (size == 2)
+		stack = sort_2(stack, a_or_b);
+	if (size == 5)
+		stack = sort_5(stack, a_or_b);
+	if (size >= 100)
+		partition_size = 20;
+	if (size >= 500)
+		partition_size = 35;
+	stack = baby_sort(stack, a_or_b, partition_size);
 	return (stack);
 }
